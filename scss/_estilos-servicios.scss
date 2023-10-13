@@ -1,0 +1,147 @@
+.icono-texto img {
+    width: 70px;
+    height: 100px;
+    
+}
+
+
+button {
+
+ width:200px;
+
+  height:50px;
+
+  text-align:center;
+
+  color:black;
+
+  border-radius:20px;
+
+  background-color: $color-primario;
+
+  .carousel-control-prev .carousel-control-next {
+    height: 100%;
+    
+  }
+
+ 
+   
+    
+}
+
+
+.boton {
+
+    width:200px;
+
+  height:50px;
+
+  text-align:center;
+
+  
+  border-radius:50px;
+
+ 
+ 
+}
+
+
+
+.send .clear{
+
+    @extend .boton ;
+  
+    background-color:rgb(255, 255, 255);
+  
+    color:$color-primario;
+  
+  }
+
+
+
+
+  .agenda {
+    @extend .boton ;
+    background-color: #ffffff;
+    color: $color-primario;
+    text-decoration: none;
+  }
+
+
+/*FILTRO*/
+#espejo, #botox, #todas {
+    display: none;
+}
+
+#sugerencias, #consultas  {
+    display: none;
+}
+
+.espejo, .botox {
+    display: none;
+}
+
+.sugerencias, .consultas {
+    display: none;
+    
+}
+
+
+#espejo:checked ~ .container-cards .espejo,
+#botox:checked ~ .container-cards .botox ,
+#todas:checked ~ .container-cards .todas
+{
+    display: flex;
+}
+
+#sugerencias:checked ~ .container-cards .sugerencias,
+#consultas:checked ~ .container-cards .consultas {
+    display: flex;
+}
+
+
+#todas:checked ~ .container-cards .espejo,
+#todas:checked ~ .container-cards .botox, 
+#todas:checked ~ .container-cards .todas{
+    display: flex;
+}
+
+#todas:checked ~ .container-cards .sugerencias,
+#todas:checked ~ .container-cards .consultas {
+    display: flex;
+}
+
+
+#espejo:checked ~ .container-opciones .label-espejo,
+#botox:checked ~ .container-opciones .label-botox,
+#todas:checked ~ .container-opciones .label-todas {
+    background-color: $color-primario;
+}
+
+#sugerencias:checked ~ .container-opciones .label-sugerencias,
+#consultas:checked ~ .container-opciones .label-consultas,
+#todas:checked ~ .container-opciones .label-todas 
+{
+    background-color: $color-primario;
+}
+
+.logo{
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    border-radius: 50%;
+    
+}
+
+.mapa{
+    gap: 50px;
+}
+
+h2 {
+    font-size: calc($size-h1 / 2) ;
+
+}
+
+p{
+    font-size:calc($size-h1 / 3);
+}
